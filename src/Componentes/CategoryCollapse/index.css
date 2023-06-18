@@ -1,0 +1,14 @@
+.header-collapse {
+    display: flex;
+    flex-direction: row;
+    background-color: #C0BB9B;
+    align-items: center;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.content-collapse {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}

@@ -8,11 +8,12 @@ import Typography from '@mui/material/Typography';
 import notFound from '../../assets/img/not-foud.jpg';
 
 export default function ItemCard({name, price, description, img}) {
+  const imagem = img? img : notFound
   return (
     <Card sx={{ width: 300, height: 400 }} className='Card-Content' style={{backgroundColor: '#D8D8D8', margin: '.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <CardMedia
         sx={{ height: 200 }}
-        image={img}
+        image={imagem}
       />
       <CardContent  style={{ padding: 0}}>
         <Typography gutterBottom variant="h5" component="div">

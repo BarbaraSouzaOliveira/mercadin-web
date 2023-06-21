@@ -32,6 +32,7 @@ export default function CategoryCollapse({categoryName, categoryId, products}) {
                 name= {product.name}
                 price= {product.price}
                 description={product.description}
+                img={product.img}
               />
             </Grid>
           )}

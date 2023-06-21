@@ -12,7 +12,7 @@ export default function ItemCard({name, price, description, img}) {
     <Card sx={{ width: 300, height: 400 }} className='Card-Content' style={{backgroundColor: '#D8D8D8', margin: '.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
       <CardMedia
         sx={{ height: 200 }}
-        image={notFound}
+        image={img}
       />
       <CardContent  style={{ padding: 0}}>
         <Typography gutterBottom variant="h5" component="div">

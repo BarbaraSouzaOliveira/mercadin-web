@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
-import './index.css';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import EditIcon from '@mui/icons-material/Edit';
-import pao from '../../assets/img/pao.jpg'
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import notFound from '../../assets/img/not-foud.jpg';
 
-export default function ItemCard({prductName, price}) {
+export default function ItemCard({name, price, description, img}) {
   return (
-    <div className='card-item'>
-       <div className='header-card'>
-        <DeleteForeverIcon aria-label="Delete"/>
-        <EditIcon aria-label="Edit"/>
-       </div>
-       <div className='content-card'>
-        <img  className='img-card' src={pao} alt="card-img"/>
-       </div>
-       <div className='footer-card'>
-        <span>{prductName}</span>
-        <span>R${parseFloat(price.toFixed(2))}</span>
-       </div>
-    </div>
+    <Card sx={{ width: 300, height: 400 }} className='Card-Content' style={{backgroundColor: '#D8D8D8', margin: '.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+      <CardMedia
+        sx={{ height: 200 }}
+        image={notFound}
+      />
+      <CardContent  style={{ padding: 0}}>
+        <Typography gutterBottom variant="h5" component="div">
+          {name}
+        </Typography>
+        <Typography variant="h6">
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions style={{backgroundColor: '#D8D8D8', marginLeft: '.5rem', padding: 0}}>
+        <p style={{color: '#546918', fontWeight: 900, marginRight: '1rem', fontSize: 'larger'}}>R${price}</p>
+        <Button size="small" >Editar Produto</Button>
+      </CardActions>
+    </Card>
   );
 }

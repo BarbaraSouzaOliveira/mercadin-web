@@ -1,6 +1,29 @@
 .button-add-prouct {
+    margin: .5rem;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    float: right;
+    z-index: 1;
     background-color: #445D0B;
 }
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content .MuiFormControl-root {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content .MuiButton-root {
+    margin-top: 20px;
+  }
+  
